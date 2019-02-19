@@ -1,13 +1,13 @@
 {
   "name": "any-team",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Base for Any Team Tools, start with a Discord Bot",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist && babel lib -d dist",
+    "build": "rimraf './dist' && babel lib -d dist",
     "start": "npm run build && node dist/index.js",
-    "watch": "chokidar 'lib/**/*.js' -c 'npm run start' --initial"
+    "dev": "nodemon --exec 'npm run start'"
   },
   "repository": {
     "type": "git",
@@ -25,12 +25,13 @@
   },
   "homepage": "https://github.com/ethyde/any-team#readme",
   "dependencies": {
+    "ascii-table": "0.0.9",
     "blizzard.js": "^3.0.0",
-    "chokidar-cli": "^1.2.1",
     "discord.js": "^11.4.2",
+    "discord.js-commando": "^0.10.0",
     "inquirer": "^6.2.2",
-    "jsonfile": "^5.0.0",
-    "lowdb": "^1.0.0"
+    "lowdb": "^1.0.0",
+    "rimraf": "^2.6.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -42,6 +43,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.0",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.18.10"
   }
 }
