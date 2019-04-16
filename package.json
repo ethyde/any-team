@@ -1,6 +1,6 @@
 {
   "name": "any-team",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Base for Any Team Tools, start with a Discord Bot",
   "main": "lib/index.js",
   "scripts": {
@@ -27,22 +27,25 @@
   "dependencies": {
     "ascii-table": "0.0.9",
     "blizzard.js": "^3.0.0",
-    "discord.js": "^11.4.2",
+    "discord.js": "git://github.com/discordjs/discord.js.git#11.4-dev",
     "discord.js-commando": "^0.10.0",
+    "ffmpeg-binaries": "^4.0.0",
     "inquirer": "^6.2.2",
     "lowdb": "^1.0.0",
-    "rimraf": "^2.6.3"
+    "node-opus": "^0.3.1",
+    "rimraf": "^2.6.3",
+    "ytdl-core-discord": "^1.0.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.12.0",
+    "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "nodemon": "^1.18.10"
   }
