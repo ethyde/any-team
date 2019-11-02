@@ -11,6 +11,8 @@ export default class WarcraftRessourcesCommand extends Command {
   constructor (client) {
     super(client, {
       name: 'ressources',
+      hidden: true,
+      ownerOnly: true,
       aliases: [],
       group: 'warcraft',
       memberName: 'ressources',
@@ -41,7 +43,7 @@ export default class WarcraftRessourcesCommand extends Command {
 
   async run (msg, args) {
     low(adapter).then(db => {
-      const getReagentEntry = db.get(`warcraft.recipes.chaudron`)
+      const getReagentEntry = db.get('warcraft.recipes.chaudron')
       // console.log('>>> msg :', msg)
       if (args.subCommand === 'add') {
         const getReagentEntryByName = getReagentEntry.find({
@@ -93,7 +95,7 @@ export default class WarcraftRessourcesCommand extends Command {
         let table = new AsciiTable('Chaudron')
         let reagentTable = ''
         let reagentSummary = ''
-        let availablePerReagent = []
+        const availablePerReagent = []
 
         table.setHeading('', 'Composant', 'Minimum', 'Actuel')
 
