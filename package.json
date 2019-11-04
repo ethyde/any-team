@@ -1,6 +1,6 @@
 {
   "name": "any-team",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Base for Any Team Tools, start with a Discord Bot",
   "main": "lib/index.js",
   "config": {
@@ -37,7 +37,7 @@
     "discord.js-commando": "^0.10.0",
     "ffmpeg-binaries": "^4.0.0",
     "inquirer": "^7.0.0",
-    "node-opus": "^0.3.3",
+    "opusscript": "0.0.7",
     "pm2": "^4.1.2",
     "rimraf": "^3.0.0",
     "sequelize": "^5.21.2",
