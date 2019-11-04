@@ -1,6 +1,6 @@
 {
   "name": "any-team",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Base for Any Team Tools, start with a Discord Bot",
   "main": "lib/index.js",
   "config": {
@@ -11,8 +11,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf './dist' && babel lib -d dist",
     "start": "npm run build && node dist/index.js",
-    "dev": "$npm_package_config_defineEnv NODE_ENV=development nodemon --exec 'npm run start'",
-    "prod": "$npm_package_config_defineEnv NODE_ENV=production npm run build && $npm_package_config_process start dist/index.js --name 'Any-Team-Bot'"
+    "watch": "$npm_package_config_defineEnv NODE_ENV=development nodemon --exec 'npm run start'",
+    "dev": "$npm_package_config_process start --name 'Any-Team-Bot' npm -- run watch",
+    "prod": "$npm_package_config_defineEnv NODE_ENV=production npm run build && $npm_package_config_process start dist/index.js --name 'Any-Team-Bot'",
+    "pm2": "$npm_package_config_process"
   },
   "repository": {
     "type": "git",
