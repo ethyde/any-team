@@ -10,7 +10,9 @@ module.exports = function (api) {
     ]
   ]
 
-  const plugins = []
+  const plugins = [
+    '@babel/plugin-proposal-class-properties'
+  ]
 
   api.cache.using(() => process.env.NODE_ENV)
 
