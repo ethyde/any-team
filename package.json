@@ -1,6 +1,6 @@
 {
   "name": "any-team",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "Base for Any Team Tools, start with a Discord Bot",
   "main": "lib/index.js",
   "config": {
@@ -13,7 +13,8 @@
     "start": "npm run build && node dist/index.js",
     "dev": "$npm_package_config_defineEnv NODE_ENV=development node index.js",
     "prod": "npm run build && $npm_package_config_defineEnv NODE_ENV=production node index.js",
-    "pm2": "$npm_package_config_process"
+    "pm2": "$npm_package_config_process",
+    "update": "node ./dist/update.js"
   },
   "repository": {
     "type": "git",
