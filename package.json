@@ -1,6 +1,6 @@
 {
   "name": "any-team",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "Base for Any Team Tools, start with a Discord Bot",
   "main": "lib/index.js",
   "config": {
